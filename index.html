@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.3.0/css/pro.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Loading Screen by idcash</title>
+</head>
+
+<body>
+<div id="bg-image" aria-hidden="true"></div>
+
+  <!-- Audio -->
+  <audio id="background-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="screen">
+    <section class="panel" id="uiPanel">
+      <!-- Header -->
+      <header class="header">
+        <div class="brand">
+          <img src="logo.png" alt="White Romania" class="logo" />
+          <div class="brandText">
+            <div class="titleRow">
+              <div class="name">White ROMANIA</div>
+              <span class="pillSmall"><span class="dot"></span> Conectare</span>
+            </div>
+            <div class="subtitle">Roleplay</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn" id="musicToggle" type="button">
+            <i class="fa-solid fa-volume-high"></i>
+            <span>MUZICA</span>
+          </button>
+
+          <button class="btn" id="uiToggle" type="button">
+            <i class="fa-solid fa-eye-slash"></i>
+            <span>ASCUNDE UI-UL</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="layout">
+        <div class="col">
+          <section class="card hero">
+            <div class="heroTop">
+              <h2>Bine ai venit pe White Romania</h2>
+              <div class="meta">
+              </div>
+            </div>
+
+            <p class="text">
+              White Romania e un server bazat pe roleplay, performanta si o comunitate mare si unita care se implica in acest proiect de lunga durata care a fost creata pe data de 23.12.2025.
+              Daca esti nou, intra pe discord, discord.gg/ariesrr, aplica in staff daca esti nou si incearca sa ridici alaturi de noi aceasta comunitate.
+            </p>
+
+            <div class="heroGrid">
+              <div class="mini">
+                <div class="miniTitle"><i class="fa-solid fa-play"></i> Getting Started</div>
+                <ol>
+                  <li>Intra pe Discord</li>
+                  <li>Citeste regulamentul de pe discord</li>
+                  <li>Aplica in staff</li>
+                </ol>
+              </div>
+
+              <div class="mini">
+                <div class="miniTitle"><i class="fa-solid fa-triangle-exclamation"></i> Quick Rules</div>
+                <ul>
+                  <li>Fara VDM / RDM</li>
+                  <li>Fara PG / NF</li>
+                  <li>Respect staff + jucatori</li>
+                  <li>RP MEDIUM</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="cardHead">
+              <h3><i class="fa-solid fa-bullhorn"></i> Update </h3>
+              <span class="muted">Server</span>
+            </div>
+
+            <div class="list">
+              <div class="row">
+                <div class="tag">UPDATE</div>
+                <div class="rowText">
+                  <div class="rowTitle">Interfata nou</div>
+                  <div class="rowSub">Hud si status schimbat</div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="tag">UPDATE</div>
+                <div class="rowText">
+                  <div class="rowTitle">Performanta</div>
+                  <div class="rowSub">Optimizari aduse sv cat si mappingurilor.</div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="tag">UPDATE</div>
+                <div class="rowText">
+                  <div class="rowTitle">Fix</div>
+                  <div class="rowSub">Au fost facute fix-uri la tot sv.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="col">
+          <section class="card">
+            <div class="cardHead">
+              <h3><i class="fa-solid fa-users"></i> Staff</h3>
+              <span class="muted">Support</span>
+            </div>
+
+            <div class="staff">
+              <div class="staffItem">
+                <div class="avatar"><img src="logo.png" alt=""></div>
+                <div class="who">
+                  <div class="whoName">IDCASH</div>
+                  <div class="whoRole">Developer</div>
+                </div>
+                <i class="fa-solid fa-code ok"></i>
+              </div>
+
+             
+          </section>
+
+          <section class="card split">
+            <div class="box">
+              <div class="boxTitle"><i class="fa-solid fa-link"></i> Links</div>
+              <div class="pills">
+                <span class="pill">discord.gg/QcEGNyfwXh</span>
+              
+            </div>
+
+            <div class="box">
+              <div class="boxTitle"><i class="fa-solid fa-keyboard"></i> Keybinds</div>
+              <div class="keys">
+                <div class="krow"><span class="kbd">H</span> Arata/Ascunde background-ul </div>
+                <div class="krow"><span class="kbd">SPACE</span> Music toggle</div>
+              </div>
+              <!-- <div class="note">Tip: foloseste borderless pentru alt-tab.</div> -->
+            </div>
+          </section>
+
+          <section class="card status">
+            <div class="statusGrid">
+              <div class="stat">
+                <div class="statTop">SERVER</div>
+                <div class="statVal">Online</div>
+              </div>
+              <div class="stat">
+                <div class="statTop">QUEUE</div>
+                <div class="statVal">—</div>
+              </div>
+              <div class="stat">
+                <div class="statTop">BUILD</div>
+                <div class="statVal">WHITE</div>
+              </div>
+            </div>
+
+            <div class="progressWrap">
+              <div class="progressHead">
+                <div class="label">Loading</div>
+                <div class="pct" id="progressPct">0%</div>
+              </div>
+              <div class="bar">
+                <div class="fill" id="progress"></div>
+              </div>
+              <div class="sub" id="progressSub">Initializare…</div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span class="muted">Tip: Apasa <span class="kbd">H</span> ca sa vezi background-ul complet !.</span>
+      </footer>
+    </section>
+
+    <!-- Overlay shown when UI hidden -->
+    <div class="revealTap" id="revealTap">
+      <div class="revealInner">
+        Apasa <span class="kbd">H</span> pentru a ascunde background -ul !
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
